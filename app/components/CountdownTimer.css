@@ -1,0 +1,125 @@
+.countdown-section {
+  position: relative;
+  background: linear-gradient(180deg, white, #eff6ff);
+  padding: 5rem 0;
+}
+
+.countdown-background {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#1e40af 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.05;
+}
+
+.countdown-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.countdown-content {
+  max-width: 56rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.countdown-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.countdown-subtitle {
+  font-size: 1.25rem;
+  color: #1d4ed8;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .countdown-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+.countdown-item {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: scale(1);
+  transition: all 0.3s;
+}
+
+.countdown-item:hover {
+  transform: scale(1.05);
+}
+
+.countdown-number {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1e3a8a, #1e40af);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.countdown-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #2563eb;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.countdown-button-container {
+  margin-top: 3rem;
+}
+
+.countdown-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  border-radius: 9999px;
+  transition: all 0.3s;
+  transform: scale(1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-button:hover {
+  background: linear-gradient(90deg, #1d4ed8, #1e3a8a);
+  transform: scale(1.05);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-button-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: 0.5rem;
+}
+
+.countdown-date {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin: 0.5rem 0;
+  text-align: center;
+  font-weight: 500;
+} 

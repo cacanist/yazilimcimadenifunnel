@@ -1,26 +1,66 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #061621;
+  --foreground: #ffffff;
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --accent: #fbbf24;
+  --text-light: #f8fafc;
+  --text-dark: #1e293b;
+  --card-bg: #101F2A;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: 'Poppins', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0f172a;
+    --foreground: #f8fafc;
+    --card-bg: #1e293b;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+}
+
+.card {
+  @apply rounded-xl shadow-lg p-6 bg-[#101F2A];
+}
+
+.input-field {
+  @apply w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 
+         focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all;
+}
+
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 
+         rounded-lg transition-all duration-200 transform hover:scale-105;
+}
+
+.countdown-card {
+  @apply bg-[#101F2A] rounded-xl shadow-lg p-4 
+         flex items-center justify-center gap-4;
+}
+
+.testimonial-card {
+  @apply bg-[#101F2A] rounded-xl shadow-lg p-6 
+         flex flex-col gap-4;
+}
+
+.benefit-item {
+  @apply flex items-start gap-4 p-4 rounded-lg bg-[#101F2A]/50 backdrop-blur-sm;
 }

@@ -1,103 +1,166 @@
 import Image from "next/image";
+import { FaCheck, FaLightbulb, FaCode, FaClock, FaUser } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="min-h-[80vh] flex items-center justify-center text-white p-8 bg-[#061621]">
+        <div className="container mx-auto max-w-6xl grid md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-8">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+              Yazılım Geliştirme Webinarı
+            </h1>
+            <p className="text-xl text-white/90">
+              Modern web teknolojileri ve en iyi pratikler hakkında bilgi edinin.
+            </p>
+            <div className="countdown-card bg-white/10 backdrop-blur-sm">
+              <div className="text-center">
+                <span className="text-2xl font-bold">24</span>
+                <span className="text-sm">Saat</span>
+              </div>
+              <div className="text-center">
+                <span className="text-2xl font-bold">45</span>
+                <span className="text-sm">Dakika</span>
+              </div>
+              <div className="text-center">
+                <span className="text-2xl font-bold">30</span>
+                <span className="text-sm">Saniye</span>
+              </div>
+            </div>
+            <button className="btn-primary bg-yellow-400 hover:bg-yellow-500 text-gray-900">
+              Hemen Kaydol
+            </button>
+          </div>
+          <div className="hidden md:block">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/developer-illustration.svg"
+              alt="Developer Illustration"
+              width={500}
+              height={500}
+              className="w-full h-auto"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-[#061621]">
+        <div className="container mx-auto max-w-6xl px-8">
+          <h2 className="text-3xl font-bold text-center mb-12">Neler Öğreneceksiniz?</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="benefit-item">
+              <FaCode className="text-2xl text-blue-500 mt-1" />
+              <div>
+                <h3 className="font-semibold text-lg">Modern Web Teknolojileri</h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  En son web geliştirme trendleri ve teknolojileri
+                </p>
+              </div>
+            </div>
+            <div className="benefit-item">
+              <FaLightbulb className="text-2xl text-yellow-500 mt-1" />
+              <div>
+                <h3 className="font-semibold text-lg">Pratik Örnekler</h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Gerçek dünya projelerinden örnekler ve uygulamalar
+                </p>
+              </div>
+            </div>
+            <div className="benefit-item">
+              <FaCheck className="text-2xl text-green-500 mt-1" />
+              <div>
+                <h3 className="font-semibold text-lg">En İyi Pratikler</h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Profesyonel geliştiricilerin kullandığı teknikler
+                </p>
+              </div>
+            </div>
+            <div className="benefit-item">
+              <FaClock className="text-2xl text-purple-500 mt-1" />
+              <div>
+                <h3 className="font-semibold text-lg">Zaman Kazanın</h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Verimli geliştirme teknikleri ile zaman tasarrufu
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Registration Form */}
+      <section className="py-20 bg-[#061621]">
+        <div className="container mx-auto max-w-2xl">
+          <div className="card bg-white dark:bg-gray-800">
+            <h2 className="text-2xl font-bold mb-6">Webinara Katılın</h2>
+            <form className="space-y-6">
+              <div>
+                <label className="block text-sm font-medium mb-2">Ad Soyad</label>
+                <input type="text" className="input-field" placeholder="Adınız ve soyadınız" />
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-2">E-posta</label>
+                <input type="email" className="input-field" placeholder="ornek@email.com" />
+              </div>
+              <button type="submit" className="btn-primary w-full">
+                Kaydol
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 bg-[#061621]">
+        <div className="container mx-auto max-w-6xl px-8">
+          <h2 className="text-3xl font-bold text-center mb-12">Katılımcılar Ne Diyor?</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="testimonial-card">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white">
+                  <FaUser />
+                </div>
+                <div>
+                  <h4 className="font-semibold">Ahmet Y.</h4>
+                  <p className="text-sm text-gray-500">Yazılım Geliştirici</p>
+                </div>
+              </div>
+              <p className="text-gray-600 dark:text-gray-300">
+                "Harika bir deneyimdi. Öğrendiklerimi hemen projelerimde uyguladım."
+              </p>
+            </div>
+            <div className="testimonial-card">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white">
+                  <FaUser />
+                </div>
+                <div>
+                  <h4 className="font-semibold">Ayşe K.</h4>
+                  <p className="text-sm text-gray-500">Frontend Developer</p>
+                </div>
+              </div>
+              <p className="text-gray-600 dark:text-gray-300">
+                "Eğitmen çok bilgiliydi. Tüm sorularımı detaylıca yanıtladı."
+              </p>
+            </div>
+            <div className="testimonial-card">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center text-white">
+                  <FaUser />
+                </div>
+                <div>
+                  <h4 className="font-semibold">Mehmet S.</h4>
+                  <p className="text-sm text-gray-500">Full Stack Developer</p>
+                </div>
+              </div>
+              <p className="text-gray-600 dark:text-gray-300">
+                "Pratik örnekler ve gerçek dünya senaryoları çok faydalıydı."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
