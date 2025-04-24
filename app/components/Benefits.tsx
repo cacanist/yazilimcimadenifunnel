@@ -26,12 +26,6 @@ const Benefits = () => {
       title: 'Kariyer Fırsatları',
       description: 'Eğitim sonrası iş fırsatları ve network imkanı',
       colorClass: 'yellow'
-    },
-    {
-      icon: '🎓',
-      title: 'Sertifika',
-      description: 'Uluslararası geçerliliği olan sertifika kazan',
-      colorClass: 'red'
     }
   ];
 
