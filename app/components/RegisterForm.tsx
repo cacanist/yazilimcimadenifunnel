@@ -9,6 +9,13 @@ const RegisterForm = () => {
     email: ''
   });
 
+  const scrollToRegister = () => {
+    const registerSection = document.getElementById('register');
+    if (registerSection) {
+      registerSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Form gönderme işlemi burada yapılacak

@@ -10,8 +10,8 @@ export default function Home() {
       <HeroSection />
       <CountdownTimer />
       <Benefits />
-      <RegisterForm />
       <SocialProof />
+      <RegisterForm />
     </main>
   );
 } 

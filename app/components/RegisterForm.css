@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .register-section {
   background-color: white;
   padding: 4rem 0;

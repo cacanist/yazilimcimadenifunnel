@@ -39,12 +39,12 @@ const CountdownTimer = () => {
       <div className="countdown-container">
         <div className="countdown-content">
           <h2 className="countdown-title">
-            BİLMÖK 2025'te Yazılımcı Madeni ile Tanışın!
+            Yazılımcı Madeni ile 4 Ayda Full Stack Web Developer Olun!
           </h2>
           <p className="countdown-date">
             15 Mayıs 2025, Saat: 20:00
           </p>
-          <p className="countdown-subtitle">NextGen ve Digital-X Programları için özel indirim fırsatını kaçırmayın!</p>
+          <p className="countdown-subtitle">Ücretsiz Webinar'e Katılın! Sektör Hakkında Bilgi Alın!</p>
           
           <div className="countdown-grid">
             <div className="countdown-item">
